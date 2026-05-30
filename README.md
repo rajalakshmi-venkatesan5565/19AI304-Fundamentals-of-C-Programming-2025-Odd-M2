@@ -412,6 +412,8 @@ int main() {
 }
 ```
 ##output:
+
+
 <img width="956" height="455" alt="Screenshot 2026-05-30 133200" src="https://github.com/user-attachments/assets/a1c11bd7-1f08-4068-8ace-e7daa902fb50" />
 
 # Result:
