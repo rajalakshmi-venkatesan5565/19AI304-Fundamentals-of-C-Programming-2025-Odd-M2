@@ -56,7 +56,69 @@
 ### Step 11:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    float mark1, mark2, mark3, average;
+
+    printf("Enter marks in Subject 1: ");
+    scanf("%f", &mark1);
+
+    printf("Enter marks in Subject 2: ");
+    scanf("%f", &mark2);
+
+    printf("Enter marks in Subject 3: ");
+    scanf("%f", &mark3);
+
+    average = (mark1 + mark2 + mark3) / 3.0;
+
+    printf("\nAverage = %.2f\n", average);
+
+    if (average >= 90.0)
+    {
+        printf("Grade: A+\n");
+    }
+    else
+    {
+        if (average >= 80.0)
+        {
+            printf("Grade: A\n");
+        }
+        else
+        {
+            if (average >= 70.0)
+            {
+                printf("Grade: B\n");
+            }
+            else
+            {
+                if (average >= 60.0)
+                {
+                    printf("Grade: C\n");
+                }
+                else
+                {
+                    if (average >= 50.0)
+                    {
+                        printf("Grade: D\n");
+                    }
+                    else
+                    {
+                        printf("Grade: F\n");
+                    }
+                }
+            }
+        }
+    }
+
+    return 0;
+}
+```
 # Output:
+<img width="918" height="495" alt="Screenshot 2026-05-30 133445" src="https://github.com/user-attachments/assets/a03d41c8-bf11-47be-abf6-b6ac48255142" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -91,45 +153,25 @@ Thus, the program was implemented and executed successfully, and the required ou
 ```
 #include <stdio.h>
 
-int main() {
-    float math, science, english, average;
+int main()
+{
+    int num = 15, i;
 
-    printf("Enter marks in Math, Science and English: ");
-    scanf("%f %f %f", &math, &science, &english);
+    printf("Multiplication Table of %d\n", num);
 
-    average = (math + science + english) / 3.0;
-
-    printf("\nAverage Marks = %.2f\n", average);
-
-    if (average >= 90.0) {
-        printf("Grade: A\n");
-    }
-    else {
-        if (average >= 80.0) {
-            printf("Grade: B\n");
-        }
-        else {
-            if (average >= 70.0) {
-                printf("Grade: C\n");
-            }
-            else {
-                if (average >= 60.0) {
-                    printf("Grade: D\n");
-                }
-                else {
-                    printf("Grade: F\n");
-                }
-            }
-        }
+    for(i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", num, i, num * i);
     }
 
     return 0;
 }
 ```
 # Output:
-<img width="918" height="467" alt="Screenshot 2026-05-30 132656" src="https://github.com/user-attachments/assets/f8e509a6-73fb-4bb3-90f3-1b25aa7a30fb" />
 
-# Result: 
+
+# Result: <img width="915" height="629" alt="Screenshot 2026-05-30 133554" src="https://github.com/user-attachments/assets/b40fe5ed-9a41-48a2-b172-ba1fa366db23" />
+
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
@@ -171,7 +213,43 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int num, i, flag = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num <= 1)
+    {
+        flag = 0;
+    }
+    else
+    {
+        for (i = 2; i <= num / 2; i++)
+        {
+            if (num % i == 0)
+            {
+                flag = 0;
+                break;
+            }
+        }
+    }
+
+    if (flag == 1)
+        printf("%d is a Prime Number.\n", num);
+    else
+        printf("%d is Not a Prime Number.\n", num);
+
+    return 0;
+}
+```
 # Output:
+<img width="918" height="382" alt="Screenshot 2026-05-30 133718" src="https://github.com/user-attachments/assets/f52c7451-8a4b-4ecd-8bbf-e0398fd11942" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -222,15 +300,24 @@ Thus, the program was implemented and executed successfully, and the required ou
 ```
 #include <stdio.h>
 
-int main() {
-    int n, i, j;
+int main()
+{
+    int i, j;
 
-    printf("Enter the value of n: ");
-    scanf("%d", &n);
-
-    for(i = 1; i <= n; i++) {
-        for(j = 1; j <= i; j++) {
-            printf("%d ", j);
+    for(i = 1; i <= 5; i++)
+    {
+        for(j = 1; j <= 5; j++)
+        {
+            if(i == 1)
+                printf("%d", j);
+            else if(i == 5)
+                printf("%d", 6 - j);
+            else if(j == 1)
+                printf("%d", i);
+            else if(j == 5)
+                printf("%d", 6 - i);
+            else
+                printf(" ");
         }
         printf("\n");
     }
@@ -239,7 +326,8 @@ int main() {
 }
 ```
 # Output:
-<img width="915" height="449" alt="Screenshot 2026-05-30 132926" src="https://github.com/user-attachments/assets/94d28af9-5ada-409d-b26c-87e230d670eb" />
+<img width="914" height="434" alt="Screenshot 2026-05-30 133832" src="https://github.com/user-attachments/assets/58011360-3c0e-4ded-888b-32729af31a40" />
+
 
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
